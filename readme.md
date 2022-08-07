@@ -1,6 +1,8 @@
 ### How to detect running version:
 
-1. Do a http request and then transform data page result to md5sum. You can do it running this command on bash:
+1. Do a http request and then transform data page result to md5sum. 
+
+You can do it by running this command on bash:
 
 ```
 curl -sf 'https://example.com/core/misc/drupal.js' | md5sum
