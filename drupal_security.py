@@ -44,7 +44,12 @@ class Drupal_Website:
 		for page in range(0,self.advisories_max_pagination):
 			print("[Info] Page {}".format(page))
 			self.get_advisories_page(page)
-			self.get_risk_levels(page)
+			try:
+				self.get_risk_levels(page)
+			except Exception as e:
+				page+=1 # counter starts in 0
+				print("[Warn] Exiting... Couldn't find core items on page {}".format(page))
+				exit()
 
 	def get_risk_levels(self,page=0):
 
