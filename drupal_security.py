@@ -68,7 +68,7 @@ class Drupal_Website:
 		for div in all_div_contents:
 			sa_core = div.select('a[href*="/sa-core-"]')[0]["href"].replace('/sa-core-','')
 			
-			print("| SA: {} | ".format(sa_core),end = '')
+			print("|   {}   | ".format(sa_core),end = '')
 			
 			risks = div.find_all("a",{"href":"/security-team/risk-levels"})
 			for risk in risks:
@@ -76,6 +76,6 @@ class Drupal_Website:
 				risk_score = re.findall(r'\d{1,2}.*\d{1,2}',risk.prettify())[0]
 				attack_vector = re.findall(r'AC.*',risk.prettify())[0]
 
-				print("Risk: {} | Attack vector: {}".format(risk_score,attack_vector))
+				print("   {}    | {}".format(risk_score,attack_vector))
 
 drupal = Drupal_Website()
