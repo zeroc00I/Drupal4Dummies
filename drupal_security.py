@@ -43,12 +43,11 @@ class Drupal_Website:
 AC: [A]ccess [c]omplexity | A: [A]uthentication
 CI: [C]onfidentiality [i]mpact | II: [I]ntegrity [i]mpact 
 E: [E]xploit | TD: [T]arget [d]istribution
-		"""
+"""
 		print(base_score_banner,end="")
+		print("|   SA Number  |    Risk   | Base Score")
 
 		for page in range(0,self.advisories_max_pagination):
-			print("\nPage {}".format(page))
-			print("|   SA Number  |    Risk   | Base Score")
 			self.get_advisories_page(page)
 			try:
 				self.get_risk_levels(page)
