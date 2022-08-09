@@ -49,6 +49,7 @@ class Drupal_Website:
 
 		for page in range(0,self.advisories_max_pagination):
 			print("\n[ Page {} ]".format(page))
+			print("|   SA Number  |     Risk    | Attack Vector")
 			self.get_advisories_page(page)
 			try:
 				self.get_risk_levels(page)
