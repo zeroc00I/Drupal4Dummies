@@ -1,5 +1,9 @@
 ## Security Advisories
 
+AC: [A]ccess [c]omplexity | A: [A]uthentication
+CI: [C]onfidentiality [i]mpact | II: [I]ntegrity [i]mpact 
+E: [E]xploit | TD: [T]arget [d]istribution
+
 |   SA Number  |    Risk     | Attack Vector |
 |--------------|-------------|-------------- |
 |   2022-015   |   11∕25   | AC:Complex/A:User/CI:Some/II:Some/E:Theoretical/TD:Uncommon |
