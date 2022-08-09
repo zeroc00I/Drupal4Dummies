@@ -1,3 +1,5 @@
+## Security Advisories
+
 |   SA Number  |    Risk     | Attack Vector |
 |--------------|-------------|-------------- |
 |   2022-015   |   11∕25   | AC:Complex/A:User/CI:Some/II:Some/E:Theoretical/TD:Uncommon |
@@ -50,7 +52,6 @@
 |   2019-003   |   23∕25   | AC:None/A:None/CI:All/II:All/E:Exploit/TD:Uncommon |
 |   2019-002   |   16∕25   | AC:Complex/A:Admin/CI:All/II:All/E:Theoretical/TD:All |
 |   2019-001   |   16∕25   | AC:Complex/A:User/CI:All/II:All/E:Proof/TD:Uncommon |
-
 
 
 ### How to detect running version:
