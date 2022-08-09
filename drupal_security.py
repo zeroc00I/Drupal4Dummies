@@ -39,17 +39,16 @@ class Drupal_Website:
 		)[-1]["href"].split("=")[-1])
 
 	def iterate_through_all_pages(self):
-		attack_vector_banner = "AC: [A]ccess [c]omplexity | " \
-		"A: [A]uthentication | " \
-		"CI: [C]onfidentiality [i]mpact | " \
-		"II: [I]ntegrity [i]mpact | " \
-		"E: [E]xploit | " \
-		"TD: [T]arget [d]istribution"
-		print(attack_vector_banner)
+		attack_vector_banner = """
+AC: [A]ccess [c]omplexity | A: [A]uthentication
+CI: [C]onfidentiality [i]mpact | II: [I]ntegrity [i]mpact 
+E: [E]xploit | TD: [T]arget [d]istribution
+		"""
+		print(attack_vector_banner,end="")
 
 		for page in range(0,self.advisories_max_pagination):
-			print("\n[ Page {} ]".format(page))
-			print("|   SA Number  |     Risk    | Attack Vector")
+			print("\nPage {}".format(page))
+			print("|   SA Number  |    Risk   | Attack Vector")
 			self.get_advisories_page(page)
 			try:
 				self.get_risk_levels(page)
@@ -76,6 +75,6 @@ class Drupal_Website:
 				risk_score = re.findall(r'\d{1,2}.*\d{1,2}',risk.prettify())[0]
 				attack_vector = re.findall(r'AC.*',risk.prettify())[0]
 
-				print("   {}    | {}".format(risk_score,attack_vector))
+				print("  {}   | {}".format(risk_score,attack_vector))
 
 drupal = Drupal_Website()
