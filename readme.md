@@ -1,4 +1,4 @@
-## Security Advisories
+## All Drupal Security Advisories (from https://www.drupal.org/security)
 
 AC: [A]ccess [c]omplexity | A: [A]uthentication
 CI: [C]onfidentiality [i]mpact | II: [I]ntegrity [i]mpact 
