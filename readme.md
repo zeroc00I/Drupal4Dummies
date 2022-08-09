@@ -1,11 +1,12 @@
 ## All Drupal Security Advisories 
 #### extracted from https://www.drupal.org/security (using drupal_security.py)
 
+Base Score Metrics
 AC: [A]ccess [c]omplexity | A: [A]uthentication
 CI: [C]onfidentiality [i]mpact | II: [I]ntegrity [i]mpact 
 E: [E]xploit | TD: [T]arget [d]istribution
 
-|   SA Number  |    Risk     | Attack Vector |
+|   SA Number  |    Risk     | Base Score |
 |--------------|-------------|-------------- |
 |   2022-015   |   11∕25   | AC:Complex/A:User/CI:Some/II:Some/E:Theoretical/TD:Uncommon |
 |   2022-014   |   15∕25   | AC:Basic/A:Admin/CI:All/II:All/E:Theoretical/TD:Uncommon |
