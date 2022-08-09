@@ -3,7 +3,7 @@
 Made with love by @zeroc00I
 This scripts intends to grab all SA-COR items,
 Then generate an updated result table
-In order to easily check their respectively attack vectors 
+In order to easily check their respectively base score 
 """
 
 from bs4 import BeautifulSoup
@@ -39,16 +39,16 @@ class Drupal_Website:
 		)[-1]["href"].split("=")[-1])
 
 	def iterate_through_all_pages(self):
-		attack_vector_banner = """
+		base_score_banner = """
 AC: [A]ccess [c]omplexity | A: [A]uthentication
 CI: [C]onfidentiality [i]mpact | II: [I]ntegrity [i]mpact 
 E: [E]xploit | TD: [T]arget [d]istribution
 		"""
-		print(attack_vector_banner,end="")
+		print(base_score_banner,end="")
 
 		for page in range(0,self.advisories_max_pagination):
 			print("\nPage {}".format(page))
-			print("|   SA Number  |    Risk   | Attack Vector")
+			print("|   SA Number  |    Risk   | Base Score")
 			self.get_advisories_page(page)
 			try:
 				self.get_risk_levels(page)
@@ -73,8 +73,8 @@ E: [E]xploit | TD: [T]arget [d]istribution
 			for risk in risks:
 				del(risk["title"]) 
 				risk_score = re.findall(r'\d{1,2}.*\d{1,2}',risk.prettify())[0]
-				attack_vector = re.findall(r'AC.*',risk.prettify())[0]
+				base_score = re.findall(r'AC.*',risk.prettify())[0]
 
-				print("  {}   | {}".format(risk_score,attack_vector))
+				print("  {}   | {} |".format(risk_score,base_score))
 
 drupal = Drupal_Website()
