@@ -59,6 +59,14 @@ E: [E]xploit | TD: [T]arget [d]istribution
 |   2019-002   |   16∕25   | AC:Complex/A:Admin/CI:All/II:All/E:Theoretical/TD:All |
 |   2019-001   |   16∕25   | AC:Complex/A:User/CI:All/II:All/E:Proof/TD:Uncommon |
 
+### How to setup a Drupal instance using a Docker image
+
+Run the command bellow:
+```
+docker run --name drupal -p 8080:8080 -p 8443:8443   --env ALLOW_EMPTY_PASSWORD=yes   --env DRUPAL_DATABASE_USER=bn_drupal   --env DRUPAL_DATABASE_PASSWORD=bitnami   --env DRUPAL_DATABASE_NAME=bitnami_drupal   --network drupal-network   --volume /path/to/drupal-persistence:/bitnami/drupal   bitnami/drupal:latest
+```
+Now, acessing https://127.0.0.1:8443, you should be able to see a Drupal homepage and thus, authenticating with this credential: **user/bitnami**
+
 
 ### How to detect running version:
 
