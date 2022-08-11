@@ -1,6 +1,6 @@
 # all_plugins.txt can be downloaded here: https://github.com/zeroc00I/Drupal4Dummies/blob/main/all_plugins.txt
 # Extracted using bash command:
-# xargs -P20 -a all_plugins.txt -I@ bash -c 'curl -sf "https://www.drupal.org/project/@" | grep -q "not covered by Drupal" && echo "@"'
+# xargs -P20 -a all_plugins.txt -I@ bash -c 'curl -sf "https://www.drupal.org/project/@" | grep -q "not covered by Drupal" && echo "https://www.drupal.org/project/@"'
 
 https://www.drupal.org/project/actionfeed
 https://www.drupal.org/project/abtestui
